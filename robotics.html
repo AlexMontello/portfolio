@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Robotics</title>
+        <link rel="icon" type="image/x-icon" href="AMIcon.ico">
+        <meta charset="utf-8">
+        <link href="portfolio.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <!-- Nunito font from google fonts (https://fonts.google.com/specimen/Nunito?query=nunito) -->
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a id="home_button" href="index.html">Home</a></li>
+                <li><a class="current" href="robotics.html">Robotics</a></li>
+                <li><a href="programming.html">Programming</a></li>
+                <li><a href="gamesanimations.html">Games & Renders</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="title">
+                <h2>Robotics Projects</h2>
+            </div>
+            <div id="columns">
+                <section>
+                    <div class="item">
+                        <h3>Sursum Ad Junction</h3>
+                        <img src="images/sursum1.png" alt="picture of Sursum Ad Junction">
+                        <img src="images/sursum2.png" alt="screenshot of Sursum Ad Junction CAD design">
+                        <ul>
+                            <li>FTC POWERPLAY season robot: the goal was to move plastic cones 5 inches tall, one at a time, onto increasingly tall, sprung poles</li>
+                            <li>Mecanum drivetrain with color sensors, deadwheel odometry, and heading lock</li>
+                            <li>&lt;4s cycles onto highest possible pole</li>
+                            <li>Virtual 4 bar arm (belted) with horizontal geared claw</li>
+                            <li>&gt;1m of vertical extension with vertical slides, assisted by constant torque springs</li>
+                            <li>Robust shell and walls</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Nerf Gun Turret</h3>
+                        <img src="images/turret1.png" alt="picture of the turret">
+                        <img src="images/turret2.png" alt="screenshot of turret CAD design">
+                        <ul>
+                            <li>30:1 gear ratio turret for yaw rotation</li>
+                            <li>Spool and string for pitch rotation</li>
+                            <li>YOLOv8 AI model to detect people (or other common objects)</li>
+                            <li>Proportional control loop to align with detections without oscillation</li>
+                            <li>Communication from python to Arduino through serial</li>
+                            <li>&gt;8 frames processed and commands sent per second using OpenCV</li>
+                            <li>Rapid fires as long as a target is centered</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>2-Axis Gantry</h3>
+                        <img src="images/gantry1.jpg" alt="picture of most of the gantry">
+                        <img src="images/gantry2.png" alt="screenshot of the gantry's CAD">
+                        <ul>
+                            <li>Controlled by 2 stepper motors with GT2 belts</li>
+                            <li>Operable manually using a joystick, or automatically</li>
+                            <li>Adjustable size using custom 3D printed clamps located on the belts and bases</li>
+                            <li>Single servo end effector for X, Y, and Z movement</li>
+                            <li>Uses an edge detection based approach to convert color images into minimal traceable paths with a pen fully autonomously</li>
+                            <li>Graphs mathematical functions or parametric equations accurately</li>
+                            <li>Random DFS based maze generation algorithm and optimized tracing paths to draw large mazes</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Stretching Robot</h3>
+                        <img src="images/stretchy.png" alt="picture of the partially stretched drivetrain">
+                        <ul>
+                            <li>4 mecanum wheels (geared with 19.2:1 DC motors for speed)</li>
+                            <li>3 stages of linear slides on each side with &gt;1.3m of horizontal extension</li>
+                            <li>Multiple modes of control possible, including one joystick for each side of the drivetrain, one joystick for translation and the other for rotation/extension/contraction, and 2 controller mode</li>
+                            <li>Scissor linkage and mesh tube for wiring</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>3 DOF Arm</h3>
+                        <img src="images/arm1.jpg" alt="picture of the built and wired arm">
+                        <img src="images/arm2.png" alt="CAD model of the arm">
+                        <ul>
+                            <li>Turret driven internally with a 4.32:1 gear ratio and unlimited rotation</li>
+                            <li>Powered by batteries and controlled by Arduino</li>
+                            <li>Inner link of arm powered directly by 2 servos, outer link powered by 1 servo indirectly via a 4 bar linkage</li>
+                            <li>Uses inverse kinematics to calculate angles(absolute for arm links and relative for turret) to any point in 3D space reachable by the arm</li>
+                            <li>Effector mounts a small camera module</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="item">
+                        <h3>Entrapption Contraption</h3>
+                        <img src="images/roobt1.png" alt="picture of the Entrapption Contraption">
+                        <img src="images/roobt2.png" alt="screenshot of the Entrapption Contraption CAD design">
+                        <ul>
+                            <li>FTC CENTERSTAGE season robot: the goal was to intake plastic, hexagonal 'pixels' in pairs and output them on a tall board angled 30 degrees from vertical</li>
+                            <li>2 stages of rubber spinning wheels chained together to flip the game pixels into the robot, mounted on a belted arm to be able to intake stacked pixels</li>
+                            <li>Triangular conveyor belt transfer mechanism to carry pixels from the intake to the output pockets</li>
+                            <li>970mm of vertical extension using linear slides, as well as a second belted arm housing 2 plungers to precisely score the pixels</li>
+                            <li>&lt;12s cycle time from intake to output</li>
+                            <li>Paper airplane launcher</li>
+                            <li>Parallel plate mecanum drivetrain with 3 deadwheel odometry pods</li>
+                            <li>30s autonomous programming using object detection, and a finite state machine</li>
+                            <li>Driver assists with distance and touch sensors</li>
+                            <li>Mechanism for suspending robot from elevated bars</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Balancing Robots</h3>
+                        <img src="images/onewheel.png" alt="image of the one-wheeled balancing robot">
+                        <ul>
+                            <li>First uses 1 bevel geared wheel and a breadboard on a rack and pinion to balance in 2 dimensions</li>
+                            <li>Second uses 2 wheels to balance in 1 dimension (I had no picture)</li>
+                            <li>Proportional and derivative control loops with accelerometer data to balance in response to disturbances</li>
+                            <li>Battery pack and Raspberry Pi Pico microcontroller</li>
+                            <li>Only somewhat effective, the 2 wheeled version was significantly more responsive</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Pac-Man Robot</h3>
+                        <img src="images/pacman.png" alt="picture of the pac-man robot">
+                        <ul>
+                            <li>2 wheels and a caster</li>
+                            <li>Hyperboloid rubber band intake into a vertical storage system holding &gt;15 objects (for 1 inch diameter balls and larger foam cubes)</li>
+                            <li>Completely autonomous maze solving ability using 2 ultrasonic distance sensors and recursive depth-first approach</li>
+                            <li>Rotating bristle mechanism to intake from tall towers</li>
+                            <li>Assists for driving straight and automations</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Block Collecting Robot</h3>
+                        <img src="images/fred1.png" alt="picture of entire robot">
+                        <img src="images/fred2.png" alt="close-up of inner mechanism">
+                        <ul>
+                            <li>2 wheels and a caster</li>
+                            <li>Plow with stabilizing arm movable to either side of the plow</li>
+                            <li>Elastic defensive scissor linkage system to blockade opponent's scoring, deployed by a rack and pinion mechanism at the start of matches</li>
+                            <li>Completely autonomous control using 4 photoresistor color sensors</li>
+                            <li>Battery operated and controlled by a Raspberry Pi Pico</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="mailto:awmontello1@gmail.com">awmontello1@gmail.com</a></li>
+                <li><a href="tel:513-505-3256">513-505-3256</a></li>
+                <li><a href="linkedin.com/in/alexander-montello-32a7102b1">LinkedIn</a></li>
+                <li>Copyright &copy;2024 University of Cincinnati IT2040</li>
+            </ul>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Games & Renders</title>
+        <link rel="icon" type="image/x-icon" href="AMIcon.ico">
+        <meta charset="utf-8">
+        <link href="portfolio.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <!-- Nunito font from google fonts (https://fonts.google.com/specimen/Nunito?query=nunito) -->
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a id="home_button" href="index.html">Home</a></li>
+                <li><a href="robotics.html">Robotics</a></li>
+                <li><a href="programming.html">Programming</a></li>
+                <li><a class="current" href="gamesanimations.html">Games & Renders</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="title">
+                <h2>Games and Renders</h2>
+            </div>
+            <div id="columns">
+                <section>
+                    <div class="item">
+                        <h3>Adventures of Jerome</h3>
+                        <video src="images/jerome.mp4" alt="video of example gameplay" controls="all"></video>
+                        <ul>
+                            <li>Mostly complete game made in Unity</li>
+                            <li>The player, Jerome, navigates 2D spaces collecting floating crystals with various effects</li>
+                            <li>Jerome can create pairs of portals on objects, which he can go through such that his exiting momentum relative to the second portal is the same as the entry momentum relative to the first</li>
+                            <li>When portals are created, time slows down to make the gameplay easier and smoother</li>
+                            <li>There are 8 levels, each with both isntructive and mocking comments</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Doodle Jump Clone</h3>
+                        <img src="images/jump.png" alt="an example of 2-player gameplay">
+                        <ul>
+                            <li>This is a simple copy of the game Doodle Jump, made in Unity</li>
+                            <li>2 players can play simultaneously, bouncing off of various types of tiles</li>
+                            <li>The game can be infinite, but the first player to fall out of the screen loses and ends the game</li>
+                            <li>Players can move side to side and can be rotated by colliding with tiles and the other player</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Dramatic Mushroom Vaporization</h3>
+                        <img src="placeholder.png" alt="placeholder image">
+                        <ul>
+                            <li>Created in Blender, inspired by a hatred for mushrooms</li>
+                            <li>A strange animation of a collection of mushrooms being destroyed by an enormous, articulated laser</li>
+                            <li>The laser is rigged with inverse kinematics, and the animation is keyframed smoothly</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Rurdle</h3>
+                        <img src="images/rurdle.png" alt="an example game of rurdle">
+                        <ul>
+                            <li>Identical to Wordle, except with 6 letters</li>
+                            <li>Made in Replit with HTML, CSS, and JavaScript</li>
+                            <li>Adaptive keyboard and win/fail messages </li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Robot Renders</h3>
+                        <img src="images/render1.png" alt="a render of our whole robot">
+                        <img src="images/render2.png" alt="a rendered simulation of pixels falling on top of the robot">
+                        <ul>
+                            <li>The robot my team made for the FTC CENTERSTAGE season</li>
+                            <li>Mostly shiny, metal parts and matte 3D prints</li>
+                            <li>The first animation is a close-up tour of the outside of the robot; the second is a simulation of a barrage game elements, 'pixels', falling around the robot</li>
+                            <li>The falling pixels are a physics simulation with a multitude rigid objects falling and colliding</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="item">
+                        <h3>Deconstructing Cubes</h3>
+                        <img src="placeholder.png" alt="placeholder image">
+                        <ul>
+                            <li>A 3D platformer-like game with no gameplay other than 3D motion with gravity; no particular goal</li>
+                            <li>When a cube comes in contact with the capsule, it breaks apart into 8 cubes of half the side length and slightly different hue</li>
+                            <li>Interesting recursive patterns arise when the player falls deep into a large cube</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>SuperSimon</h3>
+                        <img src="images/simon.png" alt="screenshot of game">
+                        <ul>
+                            <li>Made in Replit using HTML, CSS, and JavaScript</li>
+                            <li>A memory game in which a 3 by 3 array of colorful tiles are lit up in an increasingly long chain and the player's goal is to sequentially memorize the longest possible chain</li>
+                            <li>Delay between example tiles can be adjusted with a slider</li>
+                            <li>Points are awarded for each successful tile press and high scores are stored</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Chocolate Donut</h3>
+                        <img src="images/donut.png" alt="a frame from the spinning donut animation">
+                        <ul>
+                            <li>An initial animation made in Blender alongside a tutorial</li>
+                            <li>Textured and shaded donut with chocolate icing and sprinkles rotates non-linearly around the frame</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>3D Fractals</h3>
+                        <img src="images/fractal1.png" alt="a Koch quadratic fractal in 3D">
+                        <img src="images/fractal2.png" alt="a randomly updating fractal in 3D, starting from a plane">
+                        <ul>
+                            <li>A simulation in Unity that builds fractals out of shapes and recursive patterns</li>
+                            <li>Spheres generated on the same points on previous iterations' spheres create polyhedra with faces resembling Sierpi&nacute;ski triangles</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="mailto:awmontello1@gmail.com">awmontello1@gmail.com</a></li>
+                <li><a href="tel:513-505-3256">513-505-3256</a></li>
+                <li><a href="linkedin.com/in/alexander-montello-32a7102b1">LinkedIn</a></li>
+                <li>Copyright &copy;2024 University of Cincinnati IT2040</li>
+            </ul>
+        </footer>
+    </body>
+</html>

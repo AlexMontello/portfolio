@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Programming</title>
+        <link rel="icon" type="image/x-icon" href="AMIcon.ico">
+        <meta charset="utf-8">
+        <link href="portfolio.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <!-- Nunito font from google fonts (https://fonts.google.com/specimen/Nunito?query=nunito) -->
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a id="home_button" href="index.html">Home</a></li>
+                <li><a href="robotics.html">Robotics</a></li>
+                <li><a class="current" href="programming.html">Programming</a></li>
+                <li><a href="gamesanimations.html">Games & Renders</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="title">
+                <h2>Programming Projects</h2>
+            </div>
+            <div id="columns">
+                <section>
+                    <div class="item">
+                        <h3>Kinematic Pathfinder</h3>
+                        <img src="images/pathfinder1.png" alt="representation of three 2D paths, with the 3rd dimension being time">
+                        <ul>
+                            <li>Pathfinding algorithm for many objects simultaneously</li>
+                            <li>Slightly modified A* algorithm to go from starting position and velocity to ending position with zero velocity in the shortest amount of time</li>
+                            <li>Chooses paths prioritizing smaller sums of current time(from start to current node) and optimal remaining time(calculated with a piecewise function derived from kinematics), as well as preferring paths not predicted to collide with existing paths</li>
+                            <li>Adjustable constraints for how close objects may come to each other, maximum magnitude of acceleration, and disallowed positions</li>
+                            <li>Priority given to paths calculated first</li>
+                            <li>Generates paths in discrete steps of adjustable size</li>
+                            <li>Made in Unity with C#, but no logic depends on the actual 3D simulation's physics or geometry</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Assignment Grading Tool</h3>
+                        <img src="images/essay.png" alt="the AI essay grading tool">
+                        <ul>
+                            <li>Made with HTML, CSS, JavaScript (React), and Python with a team (I worked on both frontend and backend)</li>
+                            <li>Evaluates large numbers of student essays using a LLM based on customizable categories from a rubric editable by the user</li>
+                            <li>OpenAI's GPT3.5 model was used to analyze the essays</li>
+                            <li>Prompt engineering and trial/error was used to get reliable, structured outputs out of the AI completions</li>
+                            <li>Scores for each rubric category as well as comments about areas of improvement are labeled with student information and compiled into a table</li>
+                            <li>The table can be exported to a Google Sheets document automatically</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Sphere Localizer</h3>
+                        <img src="placeholder.png" alt="placeholder image">
+                        <ul>
+                            <li>Uses OpenCV and Python in a Jupyter Notebook to process frames at 10fps</li>
+                            <li>Hough circle transform used to detect a green sphere of known size and calculate its radius in pixels</li>
+                            <li>Angles are calculated from detections' positions in the frame are calculated using the focal length of the camera and the distance away is calculated from the radius of the sphere</li>
+                            <li>Position estimations are accurate within roughly 30mm as long as the sphere is within about 5m from the camera lens</li>
+                            <li>3D position data is saved to estimate the path of a projectile sphere with a quadratic bezier curve</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Mandelbrot Set</h3>
+                        <img src="images/mandelbrot.png" alt="the mandelbrot set zoomed into its boundary">
+                        <ul>
+                            <li>This uses HTML and JavaScript in Replit </li>
+                            <li>Pixels on a canvas element correspond to the complex plane with the real parts of numbers being horizontal</li>
+                            <li>The Mandelbrot Set fractal is displayed as black on a colorful background, where the color represents the amount of iterations of the recursive equation Z²+c until the value is estimated to diverge</li>
+                            <li>Zooms into/out of where the user clicks by an adjustable factor</li>
+                            <li>Can distinguish pixels approximately 10<sup>-16</sup> apart</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>AI Worksheet Completer</h3>
+                        <img src="images/worksheets.png" alt="an example worksheet and annotations">
+                        <ul>
+                            <li>Uses edge detection and contours to form a quadrilateral of interest to a piece of paper detected in the frame</li>
+                            <li>OCR used to detect questions</li>
+                            <li>OpenAI's GPT3.5 model answers the questions concisely and the responses are added under the respective question</li>
+                            <li>After answers are added, the quadrilateral of interest, including the annotated answers, is warped back to its orientation in the original frame</li>
+                            <li>Made in Jupyter Notebook with Python and the libraries OpenCV, OpenAI, numpy, and pytesseract</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>This Portfolio</h3>
+                        <img src="images/portfolio.png" alt="the home page for this portfolio">
+                        <ul>
+                            <li>You're looking at it</li>
+                            <li>Made with HTML and CSS only</li>
+                            <li>All media is made by me</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="item">
+                        <h3>Vision Assist</h3>
+                        <img src="images/vision.png" alt="an example frame processing result from depth estimation">
+                        <ul>
+                            <li>Made with Python, JavaScript (React), HTML, and CSS with a team of students (I contribued to the backend)</li>
+                            <li>Uses an AI trained from hand-labeled data of common furniture items as well as a model pre-trained on the COCO dataset</li>
+                            <li>Approximately 2 frames from a device camera processed per second, passing through MiDAS depth estimation and the two AI models to analyze surroundings</li>
+                            <li>Depending on the mode, emits audible feedback through text-to-speech describing potential hazards, or alternatively vibrates the device with a frequency representing the direction to adjust in order to avoid obstacles</li>
+                            <li>Integrated into a website with HTML and CSS, as well as an app using Dart in Flutter (not downloadable)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Restaurant Decision Maker</h3>
+                        <img src="images/restaurant.png" alt="the restaurant choosing tool">
+                        <ul>
+                            <li>Randomly picks a restaurant from a large list of options in Cincinnati</li>
+                            <li>Category options allow users to choose which types of food they are looking for</li>
+                            <li>Outputs an adjustable number of options with either some of the chosen categories or exclusively from the chosen categories</li>
+                            <li>Made in Replit with HTML, CSS, and JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>FTC Scouting Tool</h3>
+                        <img src="images/scouting.png" alt="the FTC scouting tool website">
+                        <ul>
+                            <li>Uses HTML, CSS, and JavaScript in Replit</li>
+                            <li>Tracks POWERPLAY robots' capabilities in significant detail</li>
+                            <li>Game timer and score tracking states(autonomous, driver-controlled, and endgame) consistent with matches</li>
+                            <li>Data compiled in a spreadsheet transferrable to Google Sheets</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>NYT Game Solver</h3>
+                        <img src="images/games.png" alt="an example use of solving a Wordle and Spelling Bee">
+                        <ul>
+                            <li>Made in Code.org with JavaScript and included databases of words</li>
+                            <li>Computes solutions or optimal guesses for Wordle, Spelling Bee, Letter Boxed, and Sudoku</li>
+                            <li>Wordle solution uses brute force, like Spelling Bee and Letter Boxed, to narrow down solutions and information theory to suggest guesses optimally</li>
+                            <li>Sudoku solver uses a recursive backtracking method</li>
+                            <li>Five pages, navigable with buttons, each with various user inputs</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Asteroid Hazard Predictor</h3>
+                        <img src="images/asteroids.png" alt="part of a reasearch poster describing my methods and findings">
+                        <ul>
+                            <li>Trains and tests on a dataset of 840000 asteroids from NASA from Kaggle</li>
+                            <li>Data thoroughly analyzed using matplotlib and pandas</li>
+                            <li>SMOTE used to oversample hazardous asteroids, balancing the training data</li>
+                            <li>Bagging classifiers, random forest classifiers, and decision trees were tested, all with accuracy above 99.95%</li>
+                            <li>All work done from a Python notebook; results compiled into a poster</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="mailto:awmontello1@gmail.com">awmontello1@gmail.com</a></li>
+                <li><a href="tel:513-505-3256">513-505-3256</a></li>
+                <li><a href="linkedin.com/in/alexander-montello-32a7102b1">LinkedIn</a></li>
+                <li>Copyright &copy;2024 University of Cincinnati IT2040</li>
+            </ul>
+        </footer>
+    </body>
+</html>
