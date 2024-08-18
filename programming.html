@@ -22,7 +22,7 @@
         </nav>
         <main>
             <div id="title">
-                <h2>Programming Projects</h2>
+                <h2><em>Alex Montello | </em> Programming Projects</h2>
             </div>
             <div id="columns">
                 <section>
@@ -31,7 +31,7 @@
                         <img src="images/pathfinder1.png" alt="representation of three 2D paths, with the 3rd dimension being time">
                         <ul>
                             <li>Pathfinding algorithm for many objects simultaneously</li>
-                            <li>Slightly modified A* algorithm to go from starting position and velocity to ending position with zero velocity in the shortest amount of time</li>
+                            <li>Modified A* algorithm to go from starting position and velocity to ending position with zero velocity in the shortest amount of time</li>
                             <li>Chooses paths prioritizing smaller sums of current time(from start to current node) and optimal remaining time(calculated with a piecewise function derived from kinematics), as well as preferring paths not predicted to collide with existing paths</li>
                             <li>Adjustable constraints for how close objects may come to each other, maximum magnitude of acceleration, and disallowed positions</li>
                             <li>Priority given to paths calculated first</li>
@@ -78,7 +78,7 @@
                         <img src="images/worksheets.png" alt="an example worksheet and annotations">
                         <ul>
                             <li>Uses edge detection and contours to form a quadrilateral of interest to a piece of paper detected in the frame</li>
-                            <li>OCR used to detect questions</li>
+                            <li>OCR used to detect questions mostly accurately</li>
                             <li>OpenAI's GPT3.5 model answers the questions concisely and the responses are added under the respective question</li>
                             <li>After answers are added, the quadrilateral of interest, including the annotated answers, is warped back to its orientation in the original frame</li>
                             <li>Made in Jupyter Notebook with Python and the libraries OpenCV, OpenAI, numpy, and pytesseract</li>
@@ -148,11 +148,24 @@
                             <li>All work done from a Python notebook; results compiled into a poster</li>
                         </ul>
                     </div>
+                    <div class="item">
+                        <h3>Solar System Simulation</h3>
+                        <img src="images/sim1.png" alt="an overview of the solar system with enlarged objects for visibility">
+                        <img src="images/sim2.png" alt="a spacecraft on a planned trajectory with enlarged objects">
+                        <ul>
+                            <li>Uses ephemeris and planet data from JPL and NASA </li>
+                            <li>Eulers method used to define and test trajectories through the solar system or simulate the motion of a spacecraft</li>
+                            <li>Created a mission from Earth to Neptune's eccentric moon, Nereid</li>
+                            <li>Adjustable scalars for time, planet sizes, Sun size, and viewing region size</li>
+                            <li>Made with C# in Unity</li>
+                        </ul>
+                    </div>
                 </section>
             </div>
         </main>
         <footer>
             <ul>
+                <li><small>(Last updated August 2, 2024)</small></li>
                 <li><a href="mailto:awmontello1@gmail.com">awmontello1@gmail.com</a></li>
                 <li><a href="tel:513-505-3256">513-505-3256</a></li>
                 <li><a href="linkedin.com/in/alexander-montello-32a7102b1">LinkedIn</a></li>
