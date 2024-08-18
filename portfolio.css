@@ -14,7 +14,6 @@ nav ul {
 }
 
 body {
-    /* background-color: #30033F; */
     background-image: url(tallbg.png);
     background-size: 135vw;
     margin: 0;
@@ -26,14 +25,21 @@ nav a {
     text-decoration: none;
     font-size: 120%;
     display: inline-block;
+    transition: 0.25s;
 }
 
 nav a:hover {
     background-color: #410268;
 }
 
-#title {
+#title, #titlecontact {
     font-size: 150%;
+    color: white;
+    text-align: center;
+}
+
+#abouttitle {
+    font-size: 200%;
     color: white;
     text-align: center;
 }
@@ -45,6 +51,11 @@ nav a:hover {
     border: 3px solid black;
     background: linear-gradient(210deg, #8050af, #EBE9F4 100%);
     border-radius: 15px;
+    transition: 0.25s;
+}
+
+.page_link:hover, .item:hover {
+    border: 12px solid rgb(62, 5, 76);
 }
 
 .page_link h5 a {
@@ -93,9 +104,15 @@ label {
 
 input[type="submit"] {
     width: 547px;
-    padding: 3px;
+    padding: 8px;
     margin-left: 23em;
     background-color: #BEA4DD;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #8050af;
 }
 
 input, textarea {
@@ -128,6 +145,7 @@ footer ul li a, footer ul li {
     border: 3px solid black;
     background: linear-gradient(210deg, #8050af, #EBE9F4 100%);
     border-radius: 15px;
+    transition: 0.25s;
 }
 
 .item ul {
@@ -150,7 +168,7 @@ main {
 #profile {
     float: left;
     margin-right: 1.5em;
-    width: 10em;
+    width: 9em;
     border: 3px #30033F solid;
     border-radius: 5px;
 }
@@ -166,39 +184,40 @@ main {
 table {
     border: 3px solid black; 
     width: 80%;
-    color: white;
     margin: auto;
+    opacity: 66.667%;
     border-collapse: collapse;
     border-spacing: 0;
     margin-bottom: 2em;
-    margin-top: 2em;
+    margin-top: 3em;
 }
 
 tr:nth-of-type(odd) {
-    background-color: #3b1d4d;
+    background-color: #f9f5fa;
 }
 
 tr:nth-of-type(even) {
-    background-color: #32193b;
+    background-color: #e9d7ef;
 }
 
 td, th {
-    padding: 0.5em;
+    padding: 1em;
     border: 2px solid black;
 }
 
-td {
-    color: rgb(213, 195, 218);
+em {
+    opacity: 70%;
+    font-size: 65%;
 }
 
-@media (min-width:64em) {
+@media (min-width: 1000px) {
     #columns {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width: 1000px) {
     main {
         padding: 0 2em 0 2em;
     }
@@ -229,13 +248,23 @@ td {
         width: 18em;
         text-align: left;
         float: none;
+        display: block;
     }
 
-    input[type="sumbit"] {
-        margin-left: 0px;
+    input, textarea {
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        margin: 0px;
+        width: 102.5%;
     }
 
     form {
-        width: 18em;
+        width: 60%;
+    }
+
+    .page_link h5 a {
+        font-size: 2em;
     }
 }
