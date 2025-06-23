@@ -7,7 +7,7 @@ nav ul {
     flex-basis: 100%;
     justify-content: space-around;
     list-style-type: none;
-    background-color: #59088B;
+    background-color: #240241;
     margin: 0;
     padding: 0;
     border-bottom: 5px solid black;
@@ -17,6 +17,7 @@ body {
     background-image: url(tallbg.png);
     background-size: 135vw;
     margin: 0;
+    overscroll-behavior: none;;
 }
 
 nav a {
@@ -29,7 +30,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #410268;
+    background-color: #570987;
 }
 
 #title, #titlecontact {
@@ -38,95 +39,86 @@ nav a:hover {
     text-align: center;
 }
 
-#abouttitle {
-    font-size: 200%;
-    color: white;
-    text-align: center;
-}
-
 .page_link {
     display: flex;
-    padding: 1em 2em;
+    padding: 1em 1em 1em 2em;;
     margin: 0 5em 2em 5em;
-    border: 3px solid black;
-    background: linear-gradient(210deg, #8050af, #EBE9F4 100%);
+    border: 3px solid rgb(92, 18, 152);
+    background: linear-gradient(315deg, #1c0136, #000000 100%);
     border-radius: 15px;
     transition: 0.25s;
+    text-decoration: none;      /* Remove underline */
+    color: rgb(201, 201, 201);             /* Inherit text color */
+    cursor: pointer;            /* Show pointer on hover */
 }
 
-.page_link:hover, .item:hover {
-    border: 12px solid rgb(62, 5, 76);
+.page_link:hover {
+    border: 12px solid rgb(92, 18, 152);
 }
 
-.page_link h5 a {
-    font-size: 3em;
-    text-decoration: none;
+.page_link h5 {
     margin: 0.2em auto;
-    color: #59088B;
+    font-size: 3em;
+    color: white;
 }
 
 .page_link img {
-    border: 3px #30033F solid;
-    border-radius: 5px;
+    border: 3px rgb(92, 18, 152) solid;
+    border-radius: 10px;
     max-width: 25em; 
     margin-left: 10px;
 }
 
 .item img, video {
-    border: 3px #30033F solid;
-    border-radius: 5px;
-    margin-left: 10px;
-    width: calc(100% - 20px - 1em);
+    border: 3px solid rgb(92, 18, 152);
+    border-radius: 12px;
+    margin: 0.5em;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    width: calc(100% - 1em);
 }
 
 .page_link p {
-    font-size: 90%;
+    font-size: 120%;
+}
+
+.plimg {
+    height: 300px;
+    width: 300px !important;
+}
+
+.icon {
+    margin-top: auto;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    object-fit: contain;   /* Ensures SVG/image scales proportionally */
+    padding: 2px;            /* Remove if you want the image to fill the box as much as possible */
+    vertical-align: middle;
+    opacity: 70%;
+    background: white;
+    margin: 2px !important;
+    border: 3px solid rgb(92, 18, 152) !important;
+    border-radius: 5px !important;
+    box-sizing: border-box;
+    transition: 0.2s;
+    filter: drop-shadow(0 0 5px rgba(92, 18, 152, 0.5));
+}
+
+.icon:hover {
+    opacity: 100%;
+    filter: drop-shadow(0 0 10px rgba(92, 18, 152, 0.5));
 }
 
 .current {
     text-decoration: underline 2px;
 }
 
-form {
-    width: 55em;
-    margin: auto;
-    font-size: 120%;
-}
-
-label {
-    color: #BEA4DD;
-    float: left;
-    display: block;
-    width: 15em;
-    margin-right: 1em;
-    text-align: right;
-}
-
-input[type="submit"] {
-    width: 547px;
-    padding: 8px;
-    margin-left: 23em;
-    background-color: #BEA4DD;
-    transition: 0.25s;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #8050af;
-}
-
-input, textarea {
-    display: block;
-    padding: 5px;
-    margin-bottom: 15px;
-    width: 40em;
-}
-
 footer {
-    background-color: #59088B;
     padding: 5px 0;
     border-top: 5px solid black;
     font-size: 80%;
+    backdrop-filter: blur(9px) brightness(0.5);
+    -webkit-backdrop-filter: blur(9px);
 }
 
 footer ul {
@@ -136,16 +128,27 @@ footer ul {
 footer ul li a, footer ul li {
     text-align: center;
     font-size: 110%;
-    color: #EBE9F4;
+    color: #d0d0d0;
+    transition: 0.2s;
+}
+
+footer ul li a:hover {
+    color: white;
+    font-size: 130%;
+}
+
+.plimg {
+    width: 200px;
 }
 
 .item {
     padding-left: 1em;
-    margin: 1em;
-    border: 3px solid black;
-    background: linear-gradient(210deg, #8050af, #EBE9F4 100%);
-    border-radius: 15px;
-    transition: 0.25s;
+    padding-right: 1em;
+    margin: 1.5em 0.75em;
+    border: 3px solid rgb(92, 18, 152);
+    background: linear-gradient(135deg, #1c0136, #000000 100%);
+    border-radius: 12px;
+    color: white;
 }
 
 .item ul {
@@ -165,46 +168,6 @@ main {
     padding: 0 4em 0 4em;
 }
 
-#profile {
-    float: left;
-    margin-right: 1.5em;
-    width: 9em;
-    border: 3px #30033F solid;
-    border-radius: 5px;
-}
-
-#aboutText {
-    color: white;
-    margin: auto;
-    max-width: 900px;
-    font-size: 133%;
-    line-height: 167%;
-}
-
-table {
-    border: 3px solid black; 
-    width: 80%;
-    margin: auto;
-    opacity: 66.667%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin-bottom: 2em;
-    margin-top: 3em;
-}
-
-tr:nth-of-type(odd) {
-    background-color: #f9f5fa;
-}
-
-tr:nth-of-type(even) {
-    background-color: #e9d7ef;
-}
-
-td, th {
-    padding: 1em;
-    border: 2px solid black;
-}
-
 em {
     opacity: 70%;
     font-size: 65%;
@@ -217,51 +180,76 @@ em {
     }
 }
 
+#blurb {
+    display: flex;
+    align-items: center;
+    margin: 3em auto;
+    justify-content: center;
+}
+
+#title {
+    margin: 4px auto;
+    width: fit-content;
+    padding: 0 3em;
+    line-height: 3em;
+    backdrop-filter: blur(9px) brightness(0.5);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 10px;
+}
+
+#blurb p {
+    font-size: 120%;
+    color: #fbfbfb;
+    margin-left: 1em;
+    padding: 1em;
+    width: 30%;
+    backdrop-filter: blur(9px) brightness(0.4);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 10px;
+}
+
+#blurb img {
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 30%;
+    max-width: 300px;
+}
+
 @media only screen and (max-width: 1000px) {
     main {
-        padding: 0 2em 0 2em;
+        padding: 0 2em;
     }
 
     nav ul {
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 8em;
+        display: block;
         text-align: center;
+    }
+
+    .page_link {
+        font-size: 80%;
+        margin: 0 0.4em 1em 0.4em;
+    }
+
+    #blurb p {
+        margin: 0 2em;
+        width: 80%;
+        font-size: 75%;
+        line-height: 150%;
     }
     
     nav a {
         padding: 0.5em 1em;
         text-decoration: none;
         font-size: 100%;
-        display: inline-block;
+        display: block;
     }
 
-    .page_link img {
+    .plimg {
         display: none;
     }
 
     .page_link p {
         font-size: 110%;
-    }
-
-    label {
-        width: 18em;
-        text-align: left;
-        float: none;
-        display: block;
-    }
-
-    input, textarea {
-        width: 100%;
-    }
-
-    input[type="submit"] {
-        margin: 0px;
-        width: 102.5%;
-    }
-
-    form {
-        width: 60%;
     }
 
     .page_link h5 a {
