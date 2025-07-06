@@ -68,7 +68,7 @@ nav a:hover {
     color: white;
 }
 
-.page_link img {
+.page_link video {
     border: 3px rgb(92, 18, 152) solid;
     border-radius: 10px;
     max-width: 25em; 
@@ -78,6 +78,7 @@ nav a:hover {
 .item img, video {
     border: 3px solid rgb(92, 18, 152);
     border-radius: 12px;
+    background-color: black;
     margin: 0.5em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
     width: calc(100% - 1em);
