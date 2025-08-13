@@ -219,7 +219,7 @@ em {
 
 @media only screen and (max-width: 1000px) {
     main {
-        padding: 0 2em;
+        padding: 0;
     }
 
     nav ul {
@@ -230,6 +230,10 @@ em {
     .page_link {
         font-size: 80%;
         margin: 0 0.4em 1em 0.4em;
+    }
+
+    #title {
+        margin: 1em;
     }
 
     #blurb p {
@@ -256,5 +260,9 @@ em {
 
     .page_link h5 a {
         font-size: 2em;
+    }
+
+    * {
+        font-size: 90%;
     }
 }
