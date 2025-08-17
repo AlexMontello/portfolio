@@ -168,6 +168,7 @@ footer ul li a:hover {
     background: linear-gradient(135deg, #1c0136, black 100%);
     border-radius: 12px;
     color: white;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
 }
 
 .item ul {
@@ -238,13 +239,21 @@ em {
     body:not(#home) #title {
         display: none;
     }
-    main {
+    body:not(#home) main {
         padding: 0;
+    }
+
+    #home main {
+        padding: 1em;
     }
 
     .item {
         padding-left: 0.5em;
         padding-right: 0.5em;
+    }
+
+    .item iframe {
+        height: 300px;
     }
 
     nav ul {
@@ -267,6 +276,7 @@ em {
         margin: 0 2em;
         width: 80%;
         font-size: 75%;
+        padding: 2em;
         line-height: 150%;
     }
     
@@ -278,7 +288,7 @@ em {
         display: block;
     }
 
-    .plimg {
+    .page_link div iframe {
         display: none;
     }
 
