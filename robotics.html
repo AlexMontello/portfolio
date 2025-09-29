@@ -64,16 +64,40 @@
                             <p>I contributed to the design, fabrication, and assembly of this robot for the FIRST Tech Challenge PowerPlay season in a team of 8 people. The goal was to stack plastic cones onto tall, compliant poles. The FTC Game Manual outlined the rules for robot design and gameplay, such as allowed motors, batteries, and control systems.</p>
                         </details>
                         <ul>
-                            <li>FTC POWERPLAY season robot: the goal was to move plastic cones 12.63 cm tall, one at a time, onto increasingly tall, sprung poles</li>
                             <li>Mecanum drivetrain with color sensors, deadwheel odometry, and heading lock</li>
                             <li>&lt;4 s cycles onto highest possible pole</li>
                             <li>Virtual four bar arm (belted) with horizontal geared claw</li>
                             <li>&gt;1 m of vertical extension with vertical slides, assisted by constant torque springs</li>
-                            <li>Robust shell and walls</li>
+                            <li>Robust polycarbonate shell and walls</li>
                         </ul>
                         <details class="design">
                             <summary>Design Choices</summary>
                             <p>Our team used weighted objectives tables and design reviews to begin our engineering process, and we prototyped many potential solutions before settling on our design. We prioritized modularity and consistency, and achieved this by using standardized components and easily removable subassemblies. Our 3D printed parts were tested in many 3D printed materials for our parts to lighten and stiffen them over time, including nylon, PETG, and alloy 910, and we tested several types of string for our rigged extension.We opted for a virtual four bar arm to avoid a transfer mechanism and maintain the cones' orientations as they were processed. This also allowed a passthrough cycle structure, eliminating the need to rotate the drivetrain each time. Our main vertical extension used constant force springing to counteract gravitational force and the virtual four bar arm was sprung to perfectly oppose gravity throughout its range of motion, so we could focus on optimizing these mechanisms for speed and consistency.</p>
+                        </details>
+                    </div>
+                    <div class="item">
+                        <h3>Cable Driven Manipulator</h3>
+                        <iframe
+                            src="https://www.youtube.com/embed/OZzki-m2w5o?autoplay=1&mute=1&loop=1&playlist=OZzki-m2w5o&modestbranding=1&rel=0&controls=1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            title="Cable Driven Manipulator"
+                        ></iframe>
+                        <details class="description">
+                            <summary>Context</summary>
+                            <p>This was a one-week independent project I created to learn about parallel manipulation, kinematics, and control systems. My goal was to build a device to move a platform around in 3D space with any orientation using remote actuation with a relatively high speed. Although spools seem to be generally used for this type of robot, I used servos due to the limitations of the REV control hub and for an additional engineering challenge.</p>
+                        </details>
+                        <ul>
+                            <li>Wired using the REV control hub like FTC</li>
+                            <li>Six single arm V-pulley based cable actuators using a 1:2 mechanical advantage return string</li>
+                            <li>Cable start points arranged in a triangular antiprism surrounding about a 72600 cm&#179; workspace</li>
+                            <li>Hexagonal prism platform with six cable contact points movable in 3 translational directions and with 3 axes of rotation</li>
+                            <li>Automatic servo movement from target position and Euler rotation at about 0.9 m/s or 7.5 rad/s using remote control</li>
+                            <li>Uses inverse kinematics to calculate angles for each servo using matrices and a unique polynomial regression for each arm</li>
+                        </ul>
+                        <details class="design">
+                            <summary>Design Choices</summary>
+                            <p>Due to a six servo limit, I used a critically constrained setup with six cables arranged in a setup with diverse tension directions across 3D space. This evolved into a triangular antiprism on the outside connected to a hexagonal prism of attachment points the inside, allowing each cable to have a meaningful and necessary tension vector to enable all six degrees of freedom. As the work area was very large, I laser cut a hexagonal base to mount each component with countersunk screws from below, and used the same configurable 3D printed cable redirection block on each vertex with 3D printed V bearings. Half of these blocks had a vertical aluminum extrusion for the upper cables, and the other half released the cables from near the base. To maximize range of motion using servos with limited ranges, I implemented a unique single arm tension system where a fixed endpoint on the cable was lengthened by a V bearing on the arm as it rotated, doubling the length differential over mounting the endpoint on the arm. I used matrix operations and interpolated polynomials from experimentation to calculate angles for each servo given a target position vector and Euler rotation vector. To ensure control during motion, I added tension biases to each servo, but found that more complex tensioning systems incorporating the arm angle were unnecessary.</p>
                         </details>
                     </div>
                     <div class="item">
@@ -124,31 +148,6 @@
                         <details class="design">
                             <summary>Design Choices</summary>
                             <p>Rather than pivoting the robot around the scanned object, I opted to rotate the object on a large turret to reduce moving mass and complexity. This involved using a 10:1 gear reduction and a laser cut gear stack to avoid 3D printing large parts. I used a rack and pinion with this specific gear ratio to map the 270 deg range of the servo to the 250 mm vertical extension. Both of these decisions balanced precision with speed, and allowed for precise encoder readings to correspond to distance measurements. On the software side, I made a simple program to remove cones from a cylindrical 'stock' piece, with each cone's vertex at the position of the sensor at that point and the base representing the distance detected. The angle of each cone stayed constant, as the field of view of the sensor, and the resulting form was a rough reconstruction of the original object after iterating through each detection.</p>
-                        </details>
-                    </div>
-                    <div class="item">
-                        <h3>Mini Block Launcher</h3>
-                        <iframe
-                            src="https://www.youtube.com/embed/qJddSVzHyU4?autoplay=1&mute=1&loop=1&playlist=qJddSVzHyU4&modestbranding=1&rel=0&controls=1"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            title="Mini Block Launcher"
-                        ></iframe>
-                        <details class="description">
-                            <summary>Context</summary>
-                            <p>This was an independent, one-week project I completed fully independently. My goal was to create a small robot capable of launching blocks with adjustable initial velocity and yaw, theoretically being able to land the block on any position in a disk around the turret. The goal was also to be able to launch and index many blocks in a scalable manner. The decision to use a linear mechanism rather than a rotating flywheel was purely because it was more interesting to me.</p>
-                        </details>
-                        <ul>
-                            <li>Wired using the REV control hub like FTC</li>
-                            <li>Magazine holding 9 blocks vertically</li>
-                            <li>Rectangular plunger serving as indexer and piston</li>
-                            <li>Spring with adjustable relaxed position to change exit velocity</li>
-                            <li>Reciprocating rack and pinion using a sector gear for continuous rapid fire</li>
-                            <li>360deg turret to aim along the vertical axis</li>
-                        </ul>
-                        <details class="design">
-                            <summary>Design Choices</summary>
-                            <p>The launcher pivoted on one servo, which was fixed, and the spring preload was controlled using a second servo and a single arm link to change the spring's initial extension over twice the radius of the arm, defining the slowest and fastest launches. I opted for a continuous motion to launch the projectiles to facilitate back-to-back launches and simplify the control of the turret, and achieved this using a partially thoothed sector gear that would interface with a gear rack over 70% of its rotation, pulling back the plunger and simultaneously allowing the block to fall into position, and release during the other 30% to allow the plunger to snap forward, both launching the block and retaining the stack safely with the body of the plunger. I used low-friction PETG laser cut with L brackets to form the stack so the blocks could slide down easily, and a rack and pinion to simplify linera motion.</p>
                         </details>
                     </div>
                     <div class="item">
@@ -275,31 +274,6 @@
                         </details>
                     </div>
                     <div class="item">
-                        <h3>Cable Driven Manipulator</h3>
-                        <iframe
-                            src="https://www.youtube.com/embed/OZzki-m2w5o?autoplay=1&mute=1&loop=1&playlist=OZzki-m2w5o&modestbranding=1&rel=0&controls=1"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            title="Cable Driven Manipulator"
-                        ></iframe>
-                        <details class="description">
-                            <summary>Context</summary>
-                            <p>This was a one-week independent project I created to learn about parallel manipulation, kinematics, and control systems. My goal was to build a device to move a platform around in 3D space with any orientation using remote actuation with a relatively high speed. Although spools seem to be generally used for this type of robot, I used servos due to the limitations of the REV control hub and for an additional engineering challenge.</p>
-                        </details>
-                        <ul>
-                            <li>Wired using the REV control hub like FTC</li>
-                            <li>Six single arm V-pulley based cable actuators using a 1:2 mechanical advantage return string</li>
-                            <li>Cable start points arranged in a triangular antiprism surrounding about a 72600 cm&#179; workspace</li>
-                            <li>Hexagonal prism platform with six cable contact points movable in 3 translational directions and with 3 axes of rotation</li>
-                            <li>Automatic servo movement from target position and Euler rotation at about 0.9 m/s or 7.5 rad/s using remote control</li>
-                            <li>Uses inverse kinematics to calculate angles for each servo using matrices and a unique polynomial regression for each arm</li>
-                        </ul>
-                        <details class="design">
-                            <summary>Design Choices</summary>
-                            <p>Due to a six servo limit, I used a critically constrained setup with six cables arranged in a setup with diverse tension directions across 3D space. This evolved into a triangular antiprism on the outside connected to a hexagonal prism of attachment points the inside, allowing each cable to have a meaningful and necessary tension vector to enable all six degrees of freedom. As the work area was very large, I laser cut a hexagonal base to mount each component with countersunk screws from below, and used the same configurable 3D printed cable redirection block on each vertex with 3D printed V bearings. Half of these blocks had a vertical aluminum extrusion for the upper cables, and the other half released the cables from near the base. To maximize range of motion using servos with limited ranges, I implemented a unique single arm tension system where a fixed endpoint on the cable was lengthened by a V bearing on the arm as it rotated, doubling the length differential over mounting the endpoint on the arm. I used matrix operations and interpolated polynomials from experimentation to calculate angles for each servo given a target position vector and Euler rotation vector. To ensure control during motion, I added tension biases to each servo, but found that more complex tensioning systems incorporating the arm angle were unnecessary.</p>
-                        </details>
-                    </div>
-                    <div class="item">
                         <h3>Articulated Arm</h3>
                         <iframe
                             src="https://www.youtube.com/embed/c_lsSejU2ao?autoplay=1&mute=1&loop=1&playlist=c_lsSejU2ao&modestbranding=1&rel=0&controls=1"
@@ -327,12 +301,12 @@
                         </details>
                     </div>
                     <div class="item">
-                        <h3>5x5x5 Rubik's Cube Solver</h3>
+                        <h3>5x5x5 Rubik's Cube Robot</h3>
                         <iframe
                             src="https://www.youtube.com/embed/v4ieLffUDqw?autoplay=1&mute=1&loop=1&playlist=v4ieLffUDqw&modestbranding=1&rel=0&controls=1"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
-                            title="5x5x5 Rubik's Cube Solver"
+                            title="5x5x5 Rubik's Cube Robot"
                         ></iframe>
                         <details class="description">
                             <summary>Context</summary>
@@ -400,6 +374,31 @@
                         <details class="design">
                             <summary>Design Choices</summary>
                             <p>This was a fairly simple and straightforward construction, it consisted of four vertical motors with bevel gears driving each wheel independently. This architecture was chosen because it was easy to build and work with and didn't take up very much space laterally. I attached the linear slides using plasma cut aluminum plates symmetrically and used a coiling telephone cord to manage wiring between halves and a simple 3D printed platform for the control system and battery. To explore as many modes of control as possible, I decided to allow the driver to cycle through three control modes, each making certain motion types easier to perform. To make the wiring more secure, I prototyped a laser cut scissor linkage, but this was removed due to buckling concerns.</p>
+                        </details>
+                    </div>
+                    <div class="item">
+                        <h3>Mini Block Launcher</h3>
+                        <iframe
+                            src="https://www.youtube.com/embed/qJddSVzHyU4?autoplay=1&mute=1&loop=1&playlist=qJddSVzHyU4&modestbranding=1&rel=0&controls=1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            title="Mini Block Launcher"
+                        ></iframe>
+                        <details class="description">
+                            <summary>Context</summary>
+                            <p>This was an independent, one-week project I completed fully independently. My goal was to create a small robot capable of launching blocks with adjustable initial velocity and yaw, theoretically being able to land the block on any position in a disk around the turret. The goal was also to be able to launch and index many blocks in a scalable manner. The decision to use a linear mechanism rather than a rotating flywheel was purely because it was more interesting to me.</p>
+                        </details>
+                        <ul>
+                            <li>Wired using the REV control hub like FTC</li>
+                            <li>Magazine holding 9 blocks vertically</li>
+                            <li>Rectangular plunger serving as indexer and piston</li>
+                            <li>Spring with adjustable relaxed position to change exit velocity</li>
+                            <li>Reciprocating rack and pinion using a sector gear for continuous rapid fire</li>
+                            <li>360deg turret to aim along the vertical axis</li>
+                        </ul>
+                        <details class="design">
+                            <summary>Design Choices</summary>
+                            <p>The launcher pivoted on one servo, which was fixed, and the spring preload was controlled using a second servo and a single arm link to change the spring's initial extension over twice the radius of the arm, defining the slowest and fastest launches. I opted for a continuous motion to launch the projectiles to facilitate back-to-back launches and simplify the control of the turret, and achieved this using a partially thoothed sector gear that would interface with a gear rack over 70% of its rotation, pulling back the plunger and simultaneously allowing the block to fall into position, and release during the other 30% to allow the plunger to snap forward, both launching the block and retaining the stack safely with the body of the plunger. I used low-friction PETG laser cut with L brackets to form the stack so the blocks could slide down easily, and a rack and pinion to simplify linera motion.</p>
                         </details>
                     </div>
                     <div class="item">
