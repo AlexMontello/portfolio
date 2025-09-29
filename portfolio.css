@@ -173,6 +173,8 @@ footer ul li a:hover {
 
 .item ul {
     padding-right: 2em;
+    font-size: 95%;
+    color:rgb(230, 222, 237)
 }
 
 .item h3 {
@@ -235,12 +237,57 @@ em {
     max-width: 300px;
 }
 
+details {
+    margin: 1em 2em;
+    color:white;
+    font-weight: 600;
+    font-size: 105%;
+}
+
+summary {
+    transition: 0.2s;
+    font-size: 125%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+summary:hover {
+    font-size: 140%;
+    color: #ccb0e0;
+}
+
+details p {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    color: rgb(230, 222, 237) !important;
+    font-weight: 600;
+    font-size: 80%;
+    border-left: 2px solid rgb(230, 222, 237);
+    padding-left: 0.6em;
+    margin-left: 0.4em;
+}
+
+.description {
+    padding-bottom: 1em;
+    border-bottom: 0.5px solid rgb(230, 222, 237);
+}
+
+.design {
+    padding-top: 1em;
+    border-top: 0.5px solid rgb(230, 222, 237);
+}
+
 @media only screen and (max-width: 1000px) {
     body:not(#home) #title {
         display: none;
     }
+
     body:not(#home) main {
         padding: 0;
+    }
+
+    details p {
+        font-size: 70%;
     }
 
     #home main {
