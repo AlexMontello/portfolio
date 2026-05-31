@@ -65,7 +65,7 @@
                         <ul>
                             <li>Wired using the REV control hub like FTC</li>
                             <li>Six single arm V-pulley based cable actuators using a 1:2 mechanical advantage return string</li>
-                            <li>Cable start points arranged in a triangular antiprism surrounding about a 72600 cm&#179; workspace</li>
+                            <li>Cable start points arranged in a triangular antiprism surrounding about a 72000 cm&#179; workspace</li>
                             <li>Hexagonal prism platform with six cable contact points movable in 3 translational directions and with 3 axes of rotation</li>
                             <li>Automatic servo movement from target position and Euler rotation at about 0.9 m/s or 7.5 rad/s using remote control</li>
                             <li>Uses inverse kinematics to calculate angles for each servo using matrices and a unique polynomial regression for each arm</li>
@@ -398,6 +398,32 @@
                         <details class="design">
                             <summary>Design Choices</summary>
                             <p>The launcher pivoted on one servo, which was fixed, and the spring preload was controlled using a second servo and a single arm link to change the spring's initial extension over twice the radius of the arm, defining the slowest and fastest launches. I opted for a continuous motion to launch the projectiles to facilitate back-to-back launches and simplify the control of the turret, and achieved this using a partially thoothed sector gear that would interface with a gear rack over 70% of its rotation, pulling back the plunger and simultaneously allowing the block to fall into position, and release during the other 30% to allow the plunger to snap forward, both launching the block and retaining the stack safely with the body of the plunger. I used low-friction PETG laser cut with L brackets to form the stack so the blocks could slide down easily, and a rack and pinion to simplify linera motion.</p>
+                        </details>
+                    </div>
+                    <div class="item">
+                        <h3>Conveyor Belt Arm</h3>
+                        <iframe
+                            src="https://www.youtube.com/embed/zeZAz7RCqi0?si=u90eHth0bV1sWfbB&autoplay=1&mute=1&loop=1&playlist=zeZAz7RCqi0&modestbranding=1&rel=0&controls=1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            title="Conveyor Belt Arm"
+                        ></iframe>
+                        <details class="description">
+                            <summary>Context</summary>
+                            <p>This was a two day project I put together as a prototype for a system that moves objects continuously with two aimable conveyor belt arms. The constraints were to keep all the motors static and have a side-mounted mechanism that could be easily mounted to two sides of a frame.</p>
+                        </details>
+                        <ul>
+                            <li>Train of five gears to the belt pulleys transmits motion from a stationary motor to the belt</li>
+                            <li>Pitch controlled by a two-bar linkage with rod ends to accomodate out-of-plane movement</li>
+                            <li>Linkage partially compliant by TPU segment to absorb shocks to the arm</li>
+                            <li>Yaw controlled by stationary servo rotating the primary gearbox housing through a section gear</li>
+                            <li>Color sensor mounted on the arm to detect conveyed objects</li>
+                            <li>Minimal hardstops integrated into both pitch and yaw without increasing part count</li>
+                            <li>No material beyond the plane of the belt to minimize interference</li>
+                        </ul>
+                        <details class="design">
+                            <summary>Design Choices</summary>
+                            <p>To make this prototype easy to integrate into a robot, I wanted to minimize rotating mass and simplify mounting. In order to accomplish this, I kept all three motors stationary and used two pairs of bevel gears to drive the arm's main belt with pulleys. In an effort to package everything tightly, I fit the yaw servo next to the first of the two bevel gear sets and allow it to rotate the gearbox through a toothed profile on the side of the housing. Since the pitch motor was designed to be stationary, it would need to accomodate up and down motion even if the arm moves side to side, so a linkage with spherical joints was chosen. Since I wanted the arm to be resistant to shocks in the vertical direction, I made part of this linkage out of a compliant material such that it was stiff enough to move the arm but would prevent servo damage under abuse. I worked out the kinematics of both degrees of freedom but never wired them up as I lost interest after seeing the proof of concept.</p>
                         </details>
                     </div>
                     <div class="item">
