@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Formula SAE</title>
+        <link rel="icon" type="image/x-icon" href="AMIcon.ico">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="portfolio.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <!-- Nunito font from google fonts (https://fonts.google.com/specimen/Nunito?query=nunito) -->
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a id="home_button" href="index.html">Home</a></li>
+                <li><a href="engineering.html">Engineering</a></li>
+                <li><a href="programming.html">Programming</a></li>
+                <li><a class="current" href="fsae.html">Formula SAE</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="title">
+                <h2><em>Alex Montello | </em>Formula SAE Work</h2>
+            </div>
+            <div id="columns">
+                <section>
+                    <div class="item">
+                        <h3>PF27 Rotating Assembly Preliminary Design</h3>
+                        <iframe
+                            src="https://www.youtube.com/embed/bNYcSbkp4vE?autoplay=1&mute=1&loop=1&playlist=bNYcSbkp4vE&modestbranding=1&rel=0&controls=1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            title="PF27 Rotating Assembly Preliminary Design"
+                        ></iframe>
+                        <ul>
+                            <li>Completed design and analysis for a MVP hub assembly, connecting the tire to the nonrotating assembly and transmitting drivetrain torque</li>
+                            <li>Analyzed all features with hand calculations based on structural mechanics principles and conservative assumptions</li>
+                            <li>Conducted thorough FEA to validate system under 20 yield and ultimate load cases using conservative and realistic material properties</li>
+                            <li>Completed preliminary motion study and manufacturability/serviceability checks with the tools we have</li>
+                            <li>Successfully demonstrated integration to uprights, brades, and drivetrain</li>
+                            <li>Analyzed system progress towards goals, comparison to previous systems, and cost</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>PF26 Pedalbox Analysis</h3>
+                        <iframe
+                            src="https://www.youtube.com/embed/10TiSAS_MOo?autoplay=1&mute=1&loop=1&playlist=10TiSAS_MOo&modestbranding=1&rel=0&controls=1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            title="PF26 Pedalbox Analysis"
+                        ></iframe>
+                        <ul>
+                            <li>Conducted detailed analysis of brake pedal system against conservative loads using FEM</li>
+                            <li>Created an accurate, minimally complex mesh using both 3D and 2D shell meshing techniques</li>
+                            <li>Assigned conservative contacts, joints, boundary conditions, and material properties to guarantee safety</li>
+                            <li>Completed hand calculations for throttle stop stress and pedal retainer stress concentrations to supplement FEA</li>
+                            <li>Analyzed geometry of throttle pedal travel to map position sensor signals to pedal travel</li>
+                            <li>Designed and manufactured a machined and welded brake pedal structural validation fixture to use a load cell to validate pedal strength</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="item">
+                        <h3>PF26 Pedalbox Machining</h3>
+                        <iframe
+                            src="https://www.youtube.com/embed/-1F7Qrqi2Rc?autoplay=1&mute=1&loop=1&playlist=-1F7Qrqi2Rc&modestbranding=1&rel=0&controls=1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            title="PF26 Pedalbox Machining"
+                        ></iframe>
+                        <ul>
+                            <li>Created CAM programs for 10 setups worth of CNC milling operations including contours, pockets, drills, and bores</li>
+                            <li>Inspected and assembled all tools used for machining and manually probed all operations using VPS</li>
+                            <li>Used 3 axis vertical mills to machine throttle pedal, throttle pedal base, and throttle pedal rails (6 parts including spares)</li>
+                            <li>Created detailed drawings using GD&T and met all specified tolerances</li>
+                            <li>Manually machined a complex pneumatic cylinder mount on a mill</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>PF26 Pneumatics Development</h3>
+                        <img src="images/pneumatics.png" alt="pneumatics CAD">
+                        <ul>
+                            <li>Assembled the PF26 pneumatic shifting system on the car using NPT fittings and PTFE lines</li>
+                            <li>Selected an appropriately sized air accumulator to add to the system based on pneumatic capacitance and design requirements</li>
+                            <li>Implemented and monitored air accumulator and saw reduction in shift times by up to 76%</li>
+                            <li>Documented shortcomings of PF26 shifting system function and serviceability to be addressed in PF27 vehicle</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li><small>(Last updated September 20, 2026)</small></li>
+                <li><a href="mailto:awmontello1@gmail.com">awmontello1@gmail.com</a></li>
+                <li><a href="tel:513-505-3256">513-505-3256</a></li>
+                <li><a href="https://www.linkedin.com/in/alexander-montello-32a7102b1">LinkedIn</a></li>
+                <li><a href="Alex Montello Resume.pdf" download class="resume-link">Download Resume (PDF)</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
