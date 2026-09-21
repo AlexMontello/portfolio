@@ -58,6 +58,17 @@ nav a:hover {
     cursor: pointer;            /* Show pointer on hover */
 }
 
+.page_link > div:first-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.page_link > .index_video {
+    float: none;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
 .page_link:hover {
     border: 12px solid rgb(92, 18, 152);
 }
@@ -233,8 +244,13 @@ em {
 #blurb img {
     border: 3px solid black;
     border-radius: 10px;
-    width: 30%;
+    width: 45%;
     max-width: 200px;
+}
+
+.index_video {
+    float: right;
+    margin-left: 1em;
 }
 
 details {
